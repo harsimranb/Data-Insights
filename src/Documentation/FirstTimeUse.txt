@@ -1,0 +1,12 @@
+Setting up the Database
+	If you have not already deployed the database:
+	1.	Right click the Database Project and select Publish.
+	2.	Enter in the database information where you wish to setup this new database.
+	3.	Click Publish!
+
+
+Setting up the Web Project
+	1.	In the Web.Config file in DataAnalysis.Web.Admin, set the “core” connection string to the connection you set up in “Setting up the Database” step.
+	2.	Setup the IIS application by going into DataAnalysis.Web.Admin -> Properties -> Web -> Servers -> Local IIS.  Set the ProjectUrl and create the virtual directory.
+
+That’s it!  Click Ctrl+F5 to run the project.

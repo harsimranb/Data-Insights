@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DB5E1825-FF2E-40B5-AB1C-BF54EE89A526}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{139D08C1-54BA-44E1-8CB4-CC54CBEBAE3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{16088533-9FC0-4067-A6D8-A533E8CC57E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnalysis.DomainObjects", "DataAnalysis.DomainObjects\DataAnalysis.DomainObjects.csproj", "{ABC0270B-6414-4B18-BAD5-DF5D3BEF8F35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnalysis.Interfaces", "DataAnalysis.Interfaces\DataAnalysis.Interfaces.csproj", "{C966E003-D6FB-4A0C-AF99-18B7A3B0652E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E626EDD1-4B3E-4895-8F41-E881405000B7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnalysis.Web.Admin", "DataAnalysis.Web.Admin\DataAnalysis.Web.Admin.csproj", "{C161944B-479B-4BC7-8118-773ED4397E67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Documentation", "_Documentation", "{3D57C0FE-CFAF-405C-A57F-F9E0EE3D6303}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\FirstTimeUse.txt = Documentation\FirstTimeUse.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAnalysis.Infrastructure", "DataAnalysis.Infrastructure\DataAnalysis.Infrastructure.csproj", "{B187344D-C63A-4ABF-BC42-423664D8DF92}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DataAnalysis.Database", "DataAnalysis.Database\DataAnalysis.Database.sqlproj", "{F409F252-58C7-4BD8-9369-850258CA699F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABC0270B-6414-4B18-BAD5-DF5D3BEF8F35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC0270B-6414-4B18-BAD5-DF5D3BEF8F35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC0270B-6414-4B18-BAD5-DF5D3BEF8F35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC0270B-6414-4B18-BAD5-DF5D3BEF8F35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C966E003-D6FB-4A0C-AF99-18B7A3B0652E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C966E003-D6FB-4A0C-AF99-18B7A3B0652E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C966E003-D6FB-4A0C-AF99-18B7A3B0652E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C966E003-D6FB-4A0C-AF99-18B7A3B0652E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C161944B-479B-4BC7-8118-773ED4397E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C161944B-479B-4BC7-8118-773ED4397E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C161944B-479B-4BC7-8118-773ED4397E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C161944B-479B-4BC7-8118-773ED4397E67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B187344D-C63A-4ABF-BC42-423664D8DF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B187344D-C63A-4ABF-BC42-423664D8DF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B187344D-C63A-4ABF-BC42-423664D8DF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B187344D-C63A-4ABF-BC42-423664D8DF92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F409F252-58C7-4BD8-9369-850258CA699F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F409F252-58C7-4BD8-9369-850258CA699F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F409F252-58C7-4BD8-9369-850258CA699F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F409F252-58C7-4BD8-9369-850258CA699F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F409F252-58C7-4BD8-9369-850258CA699F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F409F252-58C7-4BD8-9369-850258CA699F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ABC0270B-6414-4B18-BAD5-DF5D3BEF8F35} = {DB5E1825-FF2E-40B5-AB1C-BF54EE89A526}
+		{C966E003-D6FB-4A0C-AF99-18B7A3B0652E} = {DB5E1825-FF2E-40B5-AB1C-BF54EE89A526}
+		{C161944B-479B-4BC7-8118-773ED4397E67} = {16088533-9FC0-4067-A6D8-A533E8CC57E4}
+		{B187344D-C63A-4ABF-BC42-423664D8DF92} = {139D08C1-54BA-44E1-8CB4-CC54CBEBAE3F}
+		{F409F252-58C7-4BD8-9369-850258CA699F} = {139D08C1-54BA-44E1-8CB4-CC54CBEBAE3F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

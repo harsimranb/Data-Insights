@@ -1,0 +1,59 @@
+﻿<div>
+    <a ui-sref="projectView.main({projectId:vm.projectId})" title="go back to all projects" class="left-float" style="padding: 4px 8px; font-size: 22px;">
+        <i class="fa fa-arrow-circle-left"></i>
+    </a>
+    <h3 class="no-margin-top left-float">{{::vm.dataSource.Name}}</h3>
+</div>
+
+<div class="clear-float"></div>
+
+<form name="upsertDataSource" class="form-horizontal" ng-if="!vm.error" ng-submit="vm.submit()">
+    <div class="row">
+        <div class="col-md-6">
+            <fieldset>
+                <legend>Tables to Import</legend>
+                <div class="form-group" style="padding: 0 25px">
+                    <input type="search" ng-model="vm.tableSearch" class="form-control" placeholder="Filter Tables" />
+                </div>
+                <div class="form-group">
+                    <label class="checkbox" ng-repeat="item in vm.allTables | filter: {TableInfo:{TableType: 1, Name: vm.tableSearch}}">
+                        <input type="checkbox" ng-model="item.IsSelected"> {{::item.TableInfo.Name}}
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col-md-6">
+            <fieldset>
+                <legend>Views to Import</legend>
+                <div class="form-group" style="padding: 0 25px">
+                    <input type="search" ng-model="vm.viewSearch" class="form-control" placeholder="Filter Views" />
+                </div>
+                <div class="form-group">
+                    <label class="checkbox" ng-repeat="item in vm.allTables | filter: {TableInfo:{TableType: 2, Name: vm.viewSearch}}">
+                        <input type="checkbox" ng-model="item.IsSelected"> {{::item.TableInfo.Name}}
+                    </label>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <fieldset>
+        <div class="form-group">
+            <div class="right-float">
+                <span>
+                    <button class="btn btn-primary"
+                            style="width: 80px; margin-right: 10px"
+                            type="submit">
+                        Save
+                    </button>
+                </span>
+                <span>
+                    <button class="btn btn-default"
+                            style="width: 70px;"
+                            ng-click="vm.cancel()">
+                        Cancel
+                    </button>
+                </span>
+            </div>
+        </div>
+    </fieldset>
+</form>

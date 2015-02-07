@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DataAnalysis.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f409f252-58c7-4bd8-9369-850258ca699f}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DataAnalysis.Database</RootNamespace>
+    <AssemblyName>DataAnalysis.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <IncludeSchemaNameInFileName>True</IncludeSchemaNameInFileName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Scripts" />
+    <Folder Include="StoredProcedures" />
+    <Folder Include="StoredProcedures\Project" />
+    <Folder Include="StoredProcedures\DataSource" />
+    <Folder Include="TableType" />
+    <Folder Include="StoredProcedures\DataSource\TablesColumns" />
+    <Folder Include="StoredProcedures\DataSource\ConnectionInfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\dbo.tblProject.sql" />
+    <Build Include="Tables\dbo.tblDataSource.sql" />
+    <Build Include="Tables\dbo.tblDataConnectionInfo.sql" />
+    <Build Include="Tables\dbo.tblTableInfo.sql" />
+    <Build Include="Tables\dbo.tblTableType.sql" />
+    <Build Include="Tables\dbo.tblColumnInfo.sql" />
+    <Build Include="Tables\dbo.tblColumnDataType.sql" />
+    <Build Include="StoredProcedures\Project\dbo.pr_CreateProject.sql" />
+    <Build Include="StoredProcedures\Project\dbo.pr_UpdateProjectInfo.sql" />
+    <Build Include="StoredProcedures\Project\dbo.pr_GetSingleProject.sql" />
+    <Build Include="StoredProcedures\Project\dbo.pr_GetAllProjects.sql" />
+    <Build Include="Tables\dbo.tblDataConnectionInfoType.sql" />
+    <Build Include="StoredProcedures\DataSource\dbo.pr_UpdateDataSourceInfo.sql" />
+    <Build Include="StoredProcedures\DataSource\dbo.pr_CreateDataSource.sql" />
+    <Build Include="StoredProcedures\DataSource\dbo.pr_GetDataSourcesByProjectId.sql" />
+    <Build Include="StoredProcedures\DataSource\dbo.pr_GetDataSourceById.sql" />
+    <Build Include="TableType\dbo.ColumnInfoTableType.sql" />
+    <Build Include="TableType\dbo.TableInfoTableType.sql" />
+    <Build Include="StoredProcedures\DataSource\TablesColumns\dbo.pr_BulkAddTableInfo.sql" />
+    <Build Include="StoredProcedures\DataSource\TablesColumns\dbo.pr_BulkAddColumnInfo.sql" />
+    <Build Include="StoredProcedures\DataSource\TablesColumns\dbo.pr_CreateTableInfo.sql" />
+    <Build Include="StoredProcedures\DataSource\TablesColumns\dbo.pr_DeleteAllTablesAndColumns.sql" />
+    <Build Include="StoredProcedures\DataSource\ConnectionInfo\dbo.pr_CreateDataConnectionInfo.sql" />
+    <Build Include="StoredProcedures\DataSource\ConnectionInfo\dbo.pr_GetAllDataConnections.sql" />
+    <Build Include="StoredProcedures\DataSource\TablesColumns\dbo.pr_GetTableInfosByDataSourceId.sql" />
+    <Build Include="StoredProcedures\DataSource\TablesColumns\dbo.pr_GetColumnsInfosByTableInfoId.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DataAnalysis.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment1.sql" />
+  </ItemGroup>
+</Project>

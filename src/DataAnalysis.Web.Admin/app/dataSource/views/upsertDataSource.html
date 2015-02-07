@@ -1,0 +1,51 @@
+﻿<div class="alert alert-danger" ng-if="vm.error">{{vm.error}}</div>
+<form name="upsertDataSource" class="form-horizontal" ng-if="!vm.error" ng-submit="vm.submit()">
+    <fieldset>
+        <legend>Data Source Information</legend>
+        <div class="form-group">
+            <label for="inputDataSourceName" class="control-label col-sm-2">Name</label>
+            <div class="col-sm-4">
+                <input type="text" id="inputDataSourceName" placeholder="Data Source Name" class="form-control" ng-model="vm.dataSource.Name" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="selectConnections" class="control-label col-sm-2">Connection</label>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <select id="selectConnections" ng-model="vm.dataSource.DataConnectionInfoId" class="form-control">
+                        <option ng-repeat="item in vm.connections" value="{{item.DataConnectionInfoId}}">{{item.ServerName + ' - ' + item.DatabaseName}}</option>
+                    </select>
+                    <span class="input-group-addon clickable" ng-click="vm.newConnection()"><i class="fa fa-plus"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputDescription" class="control-label col-sm-2">Description</label>
+            <div class="col-sm-10">
+                <textarea type="text"
+                          id="inputDescription"
+                          placeholder="Data Source Description"
+                          class="form-control"
+                          ng-model="vm.dataSource.Description"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span>
+                    <button class="btn btn-primary"
+                            style="width: 80px; margin-right: 10px"
+                            type="submit">
+                        Save
+                    </button>
+                </span>
+                <span>
+                    <button class="btn btn-default"
+                            style="width: 70px;"
+                            ng-click="vm.cancel()">
+                        Cancel
+                    </button>
+                </span>
+            </div>
+        </div>
+    </fieldset>
+</form>

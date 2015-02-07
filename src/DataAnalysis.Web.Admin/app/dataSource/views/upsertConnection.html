@@ -1,0 +1,58 @@
+﻿<div style="padding: 10px;">
+    <div class="alert alert-danger" ng-if="vm.error">{{vm.error}}</div>
+    <div class="alert alert-warning" ng-if="vm.warning">{{vm.warning}}</div>
+    <form name="upsertDataSource" ng-if="!vm.error" ng-submit="vm.submit()">
+        <fieldset>
+            <legend class="no-margin-bottom">Connection Information</legend>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputServerName">Server Name</label>
+                        <input type="text" id="inputServerName" placeholder="Server Name" class="form-control" ng-model="vm.connection.ServerName" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDatabaseName">Database Name</label>
+                        <input type="text" id="inputDatabaseName" placeholder="Database Name" class="form-control" ng-model="vm.connection.DatabaseName" required />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputUsername">Username</label>
+                        <input type="text" id="inputUsername" placeholder="Username" class="form-control" ng-model="vm.connection.Username" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" id="inputPassword" placeholder="Password" class="form-control" ng-model="vm.connection.Password" required />
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label class="radio">
+                    <input type="radio" 
+                           name="ConnectionServerType" 
+                           id="sqlServerConnection" 
+                           ng-model="vm.connection.ConnectionType" 
+                           value="1" /> Microsoft Sql Server
+                </label>
+            </div>
+            <div class="form-group">
+                <div class="right-float">
+                    <span>
+                        <button class="btn btn-primary"
+                                style="width: 80px; margin-right: 10px"
+                                type="submit">
+                            Save
+                        </button>
+                    </span>
+                    <span>
+                        <button class="btn btn-default"
+                                style="width: 70px;"
+                                ng-click="vm.cancel()">
+                            Cancel
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

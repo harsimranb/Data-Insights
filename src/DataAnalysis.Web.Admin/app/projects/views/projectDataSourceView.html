@@ -1,0 +1,34 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Data Sources <a class="right-float" title="create new data source" ui-sref="createDataSource({projectId:vm.project.Id})"><i class="fa fa-plus"></i></a>
+        </h3>
+    </div>
+    <div ng-if="vm.project.DataSources.length < 1" class="panel-body">
+        <div class="alert alert-info no-margin-bottom">
+            No data sources found. Start creating new data sources!
+        </div>
+    </div>
+    <table class="table table-striped" ng-if="vm.project.DataSources.length > 0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="dataSource in vm.project.DataSources">
+                <td>{{dataSource.Name}}</td>
+                <td>{{dataSource.Description}}</td>
+                <td>
+                    <a>edit info</a>
+                    <br/>
+                    <a ui-sref="editDataSourceTables({projectId:vm.project.Id, dataSourceId:dataSource.Id})">edit tables</a>
+                    <br/>
+                    <a>delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

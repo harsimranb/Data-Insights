@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C161944B-479B-4BC7-8118-773ED4397E67}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAnalysis.Web.Admin</RootNamespace>
+    <AssemblyName>DataAnalysis.Web.Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.4.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc">
+      <HintPath>..\packages\Autofac.Mvc5.3.3.3\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AutofacConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DataSourceController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
+    <Compile Include="Framework\Controllers\BaseController.cs" />
+    <Compile Include="Framework\Filters\ErrorFilterAttribute.cs" />
+    <Compile Include="Framework\JsonNetResult.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ErrorResult.cs" />
+    <Compile Include="ViewModels\SelectableTableInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\dataSource\js\dataSourceTablesUpsertController.js" />
+    <Content Include="app\dataSource\js\connectionUpsertController.js" />
+    <Content Include="app\dataSource\js\dataSourceUpsertController.js" />
+    <Content Include="app\dataSource\views\upsertConnection.html" />
+    <Content Include="app\dataSource\views\upsertDataSource.html" />
+    <Content Include="app\dataSource\views\upsertDataSourceTablesView.html" />
+    <Content Include="app\projects\js\projectUpsertController.js" />
+    <Content Include="app\projects\js\projectViewController.js" />
+    <Content Include="app\projects\views\projectChartsView.html" />
+    <Content Include="app\projects\views\projectDataSourceView.html" />
+    <Content Include="app\projects\views\projectDetailView.html" />
+    <Content Include="app\projects\views\projectPublishView.html" />
+    <Content Include="app\projects\views\projectReportsView.html" />
+    <Content Include="app\projects\views\projectView.html" />
+    <Content Include="app\projects\views\upsertProjectView.html" />
+    <Content Include="app\_common\directives.js" />
+    <Content Include="app\_common\filters.js" />
+    <Content Include="app\_common\services\datasourceService.js" />
+    <Content Include="app\_common\services\projectService.js" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\flat-ui.css" />
+    <Content Include="Content\flat-ui.min.css" />
+    <Content Include="Content\loading-bar.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons\flat-ui-icons-regular.svg" />
+    <Content Include="fonts\lato\lato-black.svg" />
+    <Content Include="fonts\lato\lato-bold.svg" />
+    <Content Include="fonts\lato\lato-bolditalic.svg" />
+    <Content Include="fonts\lato\lato-italic.svg" />
+    <Content Include="fonts\lato\lato-light.svg" />
+    <Content Include="fonts\lato\lato-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="img\check_flat\default.png" />
+    <Content Include="Scripts\libraries\ng\angular-animate.js" />
+    <Content Include="Scripts\libraries\ng\angular-animate.min.js" />
+    <Content Include="Scripts\libraries\ng\angular-aria.js" />
+    <Content Include="Scripts\libraries\ng\angular-aria.min.js" />
+    <Content Include="Scripts\libraries\ng\angular-cookies.js" />
+    <Content Include="Scripts\libraries\ng\angular-cookies.min.js" />
+    <Content Include="Scripts\libraries\ng\angular-csp.css" />
+    <Content Include="Scripts\libraries\ng\angular-loader.js" />
+    <Content Include="Scripts\libraries\ng\angular-loader.min.js" />
+    <Content Include="Scripts\libraries\ng\angular-messages.js" />
+    <Content Include="Scripts\libraries\ng\angular-messages.min.js" />
+    <Content Include="Scripts\libraries\ng\angular-mocks.js" />
+    <Content Include="Scripts\libraries\ng\angular-resource.js" />
+    <Content Include="Scripts\libraries\ng\angular-resource.min.js" />
+    <Content Include="Scripts\libraries\ng\angular-route.js" />
+    <Content Include="Scripts\libraries\ng\angular-route.min.js" />
+    <Content Include="Scripts\libraries\ng\angular-sanitize.js" />
+    <Content Include="Scripts\libraries\ng\angular-sanitize.min.js" />
+    <Content Include="Scripts\libraries\ng\angular-scenario.js" />
+    <Content Include="Scripts\libraries\ng\angular-touch.js" />
+    <Content Include="Scripts\libraries\ng\angular-touch.min.js" />
+    <Content Include="Scripts\libraries\ng\angular-ui-router.js" />
+    <Content Include="Scripts\libraries\ng\angular.js" />
+    <Content Include="Scripts\libraries\ng\angular.min.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\projects\js\projectListController.js" />
+    <Content Include="app\projects\views\projectsListView.html" />
+    <Content Include="Scripts\libraries\ng\loading-bar.js" />
+    <Content Include="Scripts\libraries\bootstrap.js" />
+    <Content Include="Scripts\libraries\bootstrap.min.js" />
+    <Content Include="Scripts\libraries\ng\errors.json" />
+    <Content Include="Scripts\libraries\ng\angular-touch.min.js.map" />
+    <Content Include="Scripts\libraries\ng\angular-sanitize.min.js.map" />
+    <Content Include="Scripts\libraries\ng\angular-route.min.js.map" />
+    <Content Include="Scripts\libraries\ng\angular-resource.min.js.map" />
+    <Content Include="Scripts\libraries\ng\angular-messages.min.js.map" />
+    <Content Include="Scripts\libraries\ng\angular-loader.min.js.map" />
+    <Content Include="Scripts\libraries\ng\angular-cookies.min.js.map" />
+    <Content Include="Scripts\libraries\ng\angular-aria.min.js.map" />
+    <Content Include="Scripts\libraries\ng\angular-animate.min.js.map" />
+    <Content Include="Scripts\libraries\ng\angular.min.js.map" />
+    <Content Include="img\check_flat\default.psd" />
+    <Content Include="img\check_flat\Thumbs.db" />
+    <Content Include="Scripts\libraries\.jscs.json" />
+    <Content Include="Scripts\libraries\.jshintrc" />
+    <Content Include="fonts\glyphicons\flat-ui-icons-regular.eot" />
+    <Content Include="fonts\glyphicons\flat-ui-icons-regular.ttf" />
+    <Content Include="fonts\glyphicons\flat-ui-icons-regular.woff" />
+    <Content Include="fonts\glyphicons\selection.json" />
+    <Content Include="fonts\lato\lato-black.eot" />
+    <Content Include="fonts\lato\lato-black.ttf" />
+    <Content Include="fonts\lato\lato-black.woff" />
+    <Content Include="fonts\lato\lato-bold.eot" />
+    <Content Include="fonts\lato\lato-bold.ttf" />
+    <Content Include="fonts\lato\lato-bold.woff" />
+    <Content Include="fonts\lato\lato-bolditalic.eot" />
+    <Content Include="fonts\lato\lato-bolditalic.ttf" />
+    <Content Include="fonts\lato\lato-bolditalic.woff" />
+    <Content Include="fonts\lato\lato-italic.eot" />
+    <Content Include="fonts\lato\lato-italic.ttf" />
+    <Content Include="fonts\lato\lato-italic.woff" />
+    <Content Include="fonts\lato\lato-light.eot" />
+    <Content Include="fonts\lato\lato-light.ttf" />
+    <Content Include="fonts\lato\lato-light.woff" />
+    <Content Include="fonts\lato\lato-regular.eot" />
+    <Content Include="fonts\lato\lato-regular.ttf" />
+    <Content Include="fonts\lato\lato-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Scripts\libraries\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\libraries\jquery-1.10.2.js" />
+    <Content Include="Scripts\libraries\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\libraries\modernizr-2.6.2.js" />
+    <Content Include="Scripts\libraries\radiocheck.js" />
+    <Content Include="Scripts\libraries\respond.js" />
+    <Content Include="Scripts\libraries\respond.min.js" />
+    <Content Include="Scripts\libraries\ng\ui-bootstrap-tpls-0.12.0.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\libraries\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\libraries\ng\version.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAnalysis.DomainObjects\DataAnalysis.DomainObjects.csproj">
+      <Project>{abc0270b-6414-4b18-bad5-df5d3bef8f35}</Project>
+      <Name>DataAnalysis.DomainObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAnalysis.Infrastructure\DataAnalysis.Infrastructure.csproj">
+      <Project>{b187344d-c63a-4abf-bc42-423664d8df92}</Project>
+      <Name>DataAnalysis.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAnalysis.Interfaces\DataAnalysis.Interfaces.csproj">
+      <Project>{c966e003-d6fb-4a0c-af99-18b7a3b0652e}</Project>
+      <Name>DataAnalysis.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51651</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/DataAnalysisWebAdmin</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

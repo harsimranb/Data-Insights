@@ -1,0 +1,78 @@
+﻿<div>
+    <a ui-sref="home" title="go back to all projects" class="left-float" style="padding: 4px 8px; font-size: 22px;">
+        <i class="fa fa-arrow-circle-left"></i>
+    </a>
+    <h3 class="no-margin-top left-float">{{vm.project.Name}}</h3>
+</div>
+
+<div class="clear-float"></div>
+
+<div class="row">
+    <div class="col-sm-3 col-md-3 wizard">
+        <ul>
+            <li>
+                <a ui-sref=".main"
+                   ui-sref-active="active">
+                    <div class="wizard-icon"><i class="fa fa-info-circle"></i></div>
+                    <div class="wizard-content">
+                        <h4>
+                            Overview
+                        </h4>
+                        View basic project information and stats.
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a ui-sref=".dataSources"
+                   ui-sref-active="active">
+                    <div class="wizard-icon"><i class="fa fa-database"></i></div>
+                    <div class="wizard-content">
+                        <h4>
+                            Data Sources
+                        </h4>
+                        Manage the data sources for this project.
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a ui-sref=".reports"
+                   ui-sref-active="active">
+                    <div class="wizard-icon"><i class="fa fa-table"></i></div>
+                    <div class="wizard-content">
+                        <h4>
+                            Reports
+                        </h4>
+                        Build and customize reports and data tables.
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a ui-sref=".charts"
+                   ui-sref-active="active">
+                    <div class="wizard-icon"><i class="fa fa-line-chart"></i></div>
+                    <div class="wizard-content">
+                        <h4>
+                            Charts
+                        </h4>
+                        Build powerful and customizable charts to visualize data and trends.
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a ui-sref=".publish"
+                   ui-sref-active="active">
+                    <div class="wizard-icon"><i class="fa fa-server"></i></div>
+                    <div class="wizard-content">
+                        <h4>
+                            Publish
+                        </h4>
+                        Public this project to different platforms.
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-9 col-md-9">
+        <div ui-view></div>
+    </div>
+</div>

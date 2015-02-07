@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-8">
+        <h3 class="no-margin-top">Projects</h3>
+    </div>
+    <div class="col-md-4">
+        <a ui-sref="createProject" class="btn btn-primary right-float">
+            <i class="glyphicon glyphicon-plus"></i> New Project
+        </a>
+    </div>
+</div>
+
+<div ng-if="vm.projects && vm.projects.length > 0">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Created On</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="project in vm.projects">
+                <td>{{project.Id}}</td>
+                <td>
+                    <a title="view project" ui-sref="projectView.main({projectId: project.Id})">{{project.Name}}</a>
+                </td>
+                <td>{{project.Description}}</td>
+                <td>{{project.CreatedOn | jsonDate | date: 'yyyy-MM-dd HH:mm'}}</td>
+                <td><a ui-sref="editProjectInfo({projectId: project.Id})">edit</a> <a>delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div ng-if="(!vm.projects || vm.projects.length == 0) && !vm.error" class="alert alert-info">No projects found. Create a new project!</div>
+<div ng-if="vm.error" class="alert alert-danger">{{vm.error}}</div>

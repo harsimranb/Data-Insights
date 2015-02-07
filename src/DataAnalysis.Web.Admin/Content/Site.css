@@ -1,0 +1,115 @@
+﻿@media only screen and (min-width: 1355px) {
+    .container {
+        width: 850px;
+    }
+}
+
+.container {
+    position: relative;
+    width: 1016px;
+    margin: 0px auto;
+}
+
+.inline {
+    display: inline;
+}
+
+.right-float {
+    float: right;
+}
+
+.clear-float {
+    clear: both;
+}
+
+#mainMenu {
+    margin-top: 0;
+}
+
+.left-float {
+    float: left;
+}
+
+span.field-validation-error {
+    /* color: #fff; */
+    /* background-color: red; */
+    /* width: 100%; */
+    /* display: block; */
+    /* padding: 5px; */
+    /* margin-top: 5px; */
+    color: red;
+}
+
+.no-margin-top {
+    margin-top: 0;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.navbar {
+    border-radius: 0 !important;
+}
+
+.wizard ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: #2c3e50;
+    border-radius: 6px 6px 6px 6px;
+}
+
+    .wizard ul > li {
+        position: relative;
+        padding: 18px 42px 21px 25px;
+        margin-top: 2px;
+        font-size: 14px;
+        line-height: 1.214;
+        cursor: pointer;
+        background: #34495e;
+        background-size: 20px 20px;
+        -webkit-transition: .25s;
+        transition: .25s;
+    }
+
+        .wizard ul > li a.active {
+            color: #eee;
+        }
+
+        .wizard ul > li:first-child {
+            margin-top: 0;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .wizard ul > li:last-child {
+            padding-bottom: 21px;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .wizard ul > li .wizard-icon {
+            float: left;
+            padding: 11px 22px 0 0;
+            font-size: 24px;
+        }
+
+        .wizard ul > li .wizard-content {
+            padding-top: 1px;
+            overflow: hidden;
+        }
+
+            .wizard ul > li .wizard-content h4 {
+                margin: 1px 0 3px;
+                font-size: 17px;
+                color: #fff;
+            }
+
+@media (min-width: 1320px) {
+    .container {
+        width: 1316px;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
