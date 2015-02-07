@@ -40,6 +40,7 @@ This project is built on the following stack:
   <li>Sql Server</li>
   <li>AutoFac</li>
   <li>BootStrap</li>
+  <li>Microsoft Enterprise Library</li>
 </ul>
 
 <h2>Architecture</h2>
