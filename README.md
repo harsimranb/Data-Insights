@@ -1,4 +1,4 @@
-<h1>Data Insights</h1>
+<h1>Data Insights <img src="https://travis-ci.org/harsimranb/Data-Insights.svg" alt="view build" /></h1>
 An application that allows you to get better insight of your data by building reports, charts, and dashboard.  You can query data from data sources, currently Microsoft Sql Server is supported.
 
 <h2>Goals</h2>
